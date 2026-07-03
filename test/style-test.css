@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: "VT323", monospace;
+  color: #4b315f;
+  background:
+    radial-gradient(circle at 20% 20%, #ffc4e1 0 8%, transparent 20%),
+    radial-gradient(circle at 80% 10%, #f7d1ff 0 10%, transparent 24%),
+    linear-gradient(180deg, #72528f, #d98bbd 55%, #f6c0d9);
+}
+
+/* cute stars / clouds */
+body::before {
+  content: "✦ ✧ ☾ ✦ ✧ ✦ ☁ ✧ ✦ ☾ ✦";
+  position: fixed;
+  inset: 0;
+  font-size: 42px;
+  letter-spacing: 40px;
+  line-height: 120px;
+  opacity: 0.35;
+  color: #ffe8a8;
+  pointer-events: none;
+}
+
+.desktop {
+  position: relative;
+  height: 100vh;
+  padding: 38px 60px;
+}
+
+.window {
+  position: absolute;
+  background: #ffeaf4;
+  border: 3px solid #8f6aa8;
+  box-shadow: 8px 8px 0 rgba(75, 49, 95, 0.35);
+}
+
+.title-bar {
+  height: 32px;
+  background: linear-gradient(90deg, #d873aa, #b78ad7);
+  border-bottom: 3px solid #8f6aa8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  color: white;
+  font-size: 22px;
+}
+
+.controls button {
+  width: 22px;
+  height: 22px;
+  margin-left: 4px;
+  border: 2px solid #8f6aa8;
+  background: #ffd6ea;
+  color: #6f4a89;
+}
+
+.menu-bar {
+  padding: 6px 14px;
+  font-size: 22px;
+  word-spacing: 18px;
+  border-bottom: 2px solid #d9a7c7;
+}
+
+/* left desktop icons */
+.desktop-icons {
+  position: absolute;
+  left: 18px;
+  top: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  z-index: 5;
+}
+
+.desktop-icons a,
+.icons a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  font-size: 34px;
+  text-shadow: 2px 2px #6f4a89;
+}
+
+.desktop-icons span,
+.icons span {
+  display: block;
+  font-size: 18px;
+  margin-top: 4px;
+}
+
+/* main about window */
+.main-window {
+  width: 760px;
+  left: 140px;
+  top: 45px;
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1fr 330px;
+  gap: 35px;
+  padding: 40px;
+  min-height: 380px;
+}
+
+.path {
+  font-size: 26px;
+  margin-bottom: 28px;
+}
+
+h1 {
+  font-family: "Press Start 2P", monospace;
+  font-size: 44px;
+  color: #d873aa;
+  margin-bottom: 28px;
+  text-shadow: 3px 3px #ffd0e8;
+}
+
+.subtitle {
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.heart-row {
+  margin-top: 28px;
+  font-size: 26px;
+  color: #d873aa;
+}
+
+.photo-frame {
+  position: relative;
+  height: 300px;
+  border: 4px double #9d6ab8;
+  border-radius: 45% 55% 48% 52%;
+  background:
+    linear-gradient(#e7b0cd, #c496c8);
+  overflow: hidden;
+}
+
+.photo-frame::before {
+  content: "🎀 ✦ 🌹";
+  position: absolute;
+  top: 8px;
+  left: 25px;
+  font-size: 30px;
+  z-index: 2;
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* navigation window */
+.nav-window {
+  width: 650px;
+  left: 210px;
+  top: 470px;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-around;
+  padding: 28px;
+}
+
+.icons a {
+  color: #4b315f;
+  text-shadow: none;
+}
+
+/* music player */
+.music-window {
+  width: 280px;
+  right: 90px;
+  top: 120px;
+}
+
+.music-content {
+  display: flex;
+  gap: 18px;
+  padding: 22px;
+  align-items: center;
+}
+
+.album {
+  width: 70px;
+  height: 70px;
+  background: #f7c2df;
+  border: 2px solid #9d6ab8;
+  display: grid;
+  place-items: center;
+  font-size: 34px;
+}
+
+.music-content h3 {
+  font-size: 26px;
+}
+
+.music-content p {
+  font-size: 20px;
+}
+
+.progress {
+  height: 8px;
+  margin: 0 22px;
+  border: 2px solid #9d6ab8;
+  background: linear-gradient(90deg, #b78ad7 55%, #ffeaf4 55%);
+}
+
+.player {
+  text-align: center;
+  padding: 14px;
+  font-size: 26px;
+}
+
+/* reminders */
+.reminder-window {
+  width: 300px;
+  right: 140px;
+  top: 370px;
+  padding-bottom: 18px;
+}
+
+.reminder-window ul {
+  list-style: "✦ ";
+  padding: 28px 42px;
+  font-size: 24px;
+  line-height: 1.35;
+}
+
+/* bottom bar */
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 42px;
+  background: #e7a8cd;
+  border-top: 3px solid #8f6aa8;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 5px 10px;
+  font-size: 22px;
+  color: #4b315f;
+  z-index: 20;
+}
+
+.taskbar button {
+  font-family: inherit;
+  font-size: 22px;
+  background: #ffd6ea;
+  border: 2px solid #8f6aa8;
+  padding: 2px 14px;
+}
+
+.time {
+  margin-left: auto;
+}
+
+/* responsive-ish */
+@media (max-width: 900px) {
+  body {
+    overflow: auto;
+  }
+
+  .desktop {
+    height: auto;
+    padding: 20px;
+  }
+
+  .window,
+  .main-window,
+  .nav-window,
+  .music-window,
+  .reminder-window {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .desktop-icons {
+    display: none;
+  }
+
+  .hero-layout {
+    grid-template-columns: 1fr;
+  }
+}
