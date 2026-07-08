@@ -35,9 +35,14 @@ body {
   font-family: var(--body);
   color: var(--ink);
   background:
+    radial-gradient(ellipse at 50% 30%, #2a1440 0%, transparent 55%),
+    radial-gradient(ellipse at 15% 85%, #150826 0%, transparent 50%),
+    linear-gradient(to bottom, #05030a, #0d0518 40%, #05030a);
+  /*
+  background:
     radial-gradient(ellipse at 20% 10%, var(--bg-glow) 0%, transparent 45%),
     radial-gradient(ellipse at 85% 80%, #5a2e63 0%, transparent 50%),
-    linear-gradient(to bottom, var(--bg-deep), var(--bg-mid) 60%, var(--bg-deep));
+    linear-gradient(to bottom, var(--bg-deep), var(--bg-mid) 60%, var(--bg-deep));*/
   background-attachment: fixed;
   overflow-x: hidden;
   position: relative;
